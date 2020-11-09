@@ -1,0 +1,472 @@
+body {
+  background-color: #ffffff;
+  font-family: 'Assistant', sans-serif;
+  color: #06122D;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #06122D;
+  font-size: large;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  font-weight: 600;
+  color: #06122D !important;
+}
+
+.btn-navbar-right {
+  margin-top: -10px !important;
+  margin-bottom: -8px !important;
+  margin-right: -18px !important;
+  height: 70px;
+  border-radius: 0px;
+}
+
+.btn-login {
+  background-color: #06122D;
+  color: #ffffff;
+  font-size: large;
+}
+
+.btn-login:hover {
+  background-color: #071C4D;
+  color: #ffffff;
+}
+
+header {
+  padding: 180px 0 165px;
+  margin-top: -70px;
+  background-image: url("../images/Group 18@2x.jpg");
+  background-size: cover;
+}
+
+header h1, header p {
+  color: #ffffff;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+header p {
+  font-size: 22px;
+}
+
+header .btn-get-started {
+  background-color: #FF8629;
+  color: #ffffff;
+  border-radius: 0;
+  font-size: 600;
+}
+
+header .btn-get-started:hover {
+  background-color: #FB6D00;
+  color: #ffffff;
+}
+
+.section-stats {
+  margin-top: -50px;
+}
+
+.section-stats .stats-detail {
+  padding-top: 9px;
+  padding-left: 100px;
+  background-color: #ffffff;
+}
+
+.section-stats h2 {
+  font-size: 37px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.section-stats p {
+  font-size: 27px;
+  font-weight: 300;
+}
+
+.section-popular {
+  min-height: 540px;
+  background-color: #06122D;
+  margin-top: -59px;
+  margin-bottom: -230px;
+}
+
+.section-popular .section-popular-heading {
+  margin-top: 149px;
+}
+
+.section-popular .section-popular-heading h2 {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.section-popular .section-popular-heading p {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.section-popular-content .section-popular-travel .card-travel {
+  min-height: 380px;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.section-popular-content .section-popular-travel .travel-country {
+  font-size: 15px;
+  color: white;
+}
+
+.section-popular-content .section-popular-travel .travel-location {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+
+.section-popular-content .section-popular-travel .travel-button .btn-view-details {
+  background-color: #FF8629;
+  color: white;
+  border-radius: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.section-popular-content .section-popular-travel .travel-button .btn-view-details:hover {
+  background-color: #FB6D00;
+}
+
+.section-network {
+  background-color: white;
+  margin-top: -170px;
+  padding-top: 295px;
+  padding-bottom: 90px;
+}
+
+.section-network h2 {
+  color: #040F2A;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.section-network p {
+  color: #040F2A;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+.section-network img {
+  max-width: 100%;
+  padding-top: 30px;
+}
+
+.section-testimonial-heading {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f7f9ff));
+  background: linear-gradient(#ffffff 0%, #f7f9ff 100%);
+  padding-top: 50px;
+  min-height: 506px;
+}
+
+.section-testimonial-heading h2 {
+  color: #040F2A;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.section-testimonial-heading p {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.section-testimonial-content {
+  margin-top: -230px;
+  padding-bottom: 50px;
+}
+
+.section-testimonial-content .card-testimonial {
+  padding: 40px 20px 10px;
+  border-radius: 11px;
+  margin-bottom: 20px;
+}
+
+.section-testimonial-content .card-testimonial .testimonial-content {
+  min-height: 330px;
+}
+
+.section-testimonial-content .card-testimonial h3 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.section-testimonial-content .card-testimonial .Testimonial {
+  font-size: 18px;
+  font-weight: normal;
+  color: #747474;
+  min-height: 60px;
+}
+
+.section-testimonial-content .card-testimonial .trip-to {
+  font-size: 22px;
+  font-weight: 500;
+  color: #040F2A;
+}
+
+.section-testimonial-content .btn-get-started {
+  background-color: #FF8629;
+  color: #ffffff;
+  border-radius: 0;
+  font-size: 600;
+}
+
+.section-testimonial-content .btn-get-started:hover {
+  background-color: #FB6D00;
+  color: #ffffff;
+}
+
+.section-testimonial-content .btn-need-help {
+  background-color: #D9D9D9;
+  color: #BCBCBC;
+  border-radius: 0;
+  font-size: 600;
+}
+
+.section-footer a {
+  color: #040F2A;
+}
+
+.section-footer h5 {
+  font-weight: 600;
+}
+
+.section-details-header {
+  min-height: 310px;
+  background-color: #E4E6EB;
+  margin-top: -68px;
+}
+
+.section-details-content {
+  margin-top: -210px;
+  min-height: 100vh;
+}
+
+.section-details-content .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+
+.section-details-content .breadcrumb-item {
+  font-size: large;
+}
+
+.section-details-content .breadcrumb-item.active {
+  color: #040F2A;
+  font-weight: bold;
+}
+
+.section-details-content .card-details {
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.section-details-content .card-details h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.section-details-content .card-details h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.section-details-content .card-details h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.section-details-content .card-details p {
+  color: #575757;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.section-details-content .card-right {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+}
+
+.section-details-content .features {
+  margin-top: 30px;
+}
+
+.section-details-content .features h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.section-details-content .features p {
+  margin-bottom: 0;
+}
+
+.section-details-content .features .description {
+  margin-left: 10px;
+  float: left;
+  overflow: hidden;
+}
+
+.section-details-content .features .features-image {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.section-details-content .gallery .xzoom-container {
+  display: block;
+}
+
+.section-details-content .gallery .xzoom-container .xzoom {
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.section-details-content .gallery .xzoom-container .xactive {
+  border: 4px solid #1a4c9c;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.section-details-content .members .member-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.section-details-content .join-container {
+  margin-top: -16px;
+}
+
+.section-details-content .join-container .btn-join-now {
+  background-color: #FF8629;
+  color: white;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+.section-details-content .join-container .btn-join-now:hover {
+  background-color: #FB6D00;
+  color: #ffffff;
+}
+
+.section-details-content .trip-information th {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.section-details-content .trip-information td {
+  color: #575757;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.section-details-content .trip-information .text-blue {
+  color: #071C4D;
+  font-weight: 600;
+}
+
+.section-details-content .trip-information .text-orange {
+  color: #FF8629;
+  font-weight: 600;
+}
+
+.section-details-content .disclaimer {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.section-details-content .payment {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.section-details-content .bank .bank-item h3 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.section-details-content .bank .bank-item .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.section-details-content .bank .bank-item .bank-image {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+.section-details-content .gj-datepicker {
+  height: 35px;
+}
+
+.section-details-content .gj-datepicker .datepicker {
+  border-right: 0;
+}
+
+.section-details-content .gj-datepicker .input-group-append .btn {
+  padding-right: 30px;
+}
+
+.section-details-content .btn-add-now {
+  background-color: #06122D;
+  color: white;
+}
+
+.section-details-content .btn-add-now:hover {
+  background-color: #071C4D;
+  color: #ffffff;
+}
+
+.section-succes h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #071C4D;
+}
+
+.section-succes p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #B1B1B1;
+}
+
+.section-succes .btn-homepage {
+  color: white;
+  background-color: #06122D;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.section-succes .btn-homepage:hover {
+  color: white;
+  background-color: #071C4D;
+}
+/*# sourceMappingURL=main.css.map */
