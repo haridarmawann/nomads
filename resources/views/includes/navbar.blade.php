@@ -3,7 +3,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <!-- Brand -->
                 <a class="navbar-brand" href="#">
-                    <img src="frontend/images/logo.png">    
+                    <img src="{{ url('frontend/images/logo.png')}}">    
                 </a>
             
                 <!--button toggler-->
@@ -36,20 +36,42 @@
                             <a class="nav-link" href="#">Testimonial</a>
                         </li>
                      </ul>
-
+                    
+                    @guest
                      <!--Mobile Login Button-->
-                     <form action="" class="form-inline d-sm-block d-md-none">
-                        <button class="btn btn-login my-2 my-sm-0">
-                            Masuk
-                        </button>
-                    </form>
+                        <form action="" class="form-inline d-sm-block d-md-none">
+                            <button class="btn btn-login my-2 my-sm-0" type="button" 
+                            onclick="event.preventDefault(); location.href='{{ url('login') }}';">
+                                Masuk
+                            </button>
+                        </form>
 
-                    <!--Desktop Login Button-->
-                    <form action="" class="form-inline my-2 my-lg-0 d-none d-md-block">
-                        <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
-                            Masuk
-                        </button>
-                    </form>
+                        <!--Desktop Login Button-->
+                        <form action="" class="form-inline my-2 my-lg-0 d-none d-md-block">
+                            <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="button" 
+                            onclick="event.preventDefault(); location.href='{{ url('login') }}';">
+                                Masuk
+                            </button>
+                        </form>
+                    @endguest
+
+                    @auth
+                     <!--Mobile Login Button-->
+                        <form action="{{ url('logout') }}" method="POST" class="form-inline d-sm-block d-md-none">
+                        @csrf
+                            <button class="btn btn-login my-2 my-sm-0" type="submit">
+                                Keluar
+                            </button>
+                        </form>
+
+                        <!--Desktop Login Button-->
+                        <form action="{{ url('logout') }}" method="POST" class="form-inline my-2 my-lg-0 d-none d-md-block">
+                        @csrf
+                            <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="submit" >
+                                Keluar
+                            </button>
+                        </form>
+                    @endauth
                     
                 </div>
             </nav>

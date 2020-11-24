@@ -28,85 +28,62 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="card card-details">
-                            <h1>Nusa Penida</h1>
-                            <p>Republic of Indonesia Raya</p>
+                            <h1>{{ $item->title }}</h1>
+                            <p>{{ $item ->location }}</p>
+
+
+
+                            @if ($item->galleries->count())
                             <div class="gallery">
                                 <div class="xzoom-container">
-                                    <img src="frontend/images/Mask Group 3.jpg" class="xzoom" 
-                                    id="xzoom-default" xoriginal="frontend/images/Mask Group 3.jpg">
+                                    <img src="{{ Storage::url($item->galleries->first()->image )}}" class="xzoom" 
+                                    id="xzoom-default" xoriginal="{{ Storage::url($item->galleries->first()->image )}}">
                                 
                                     <div class="xzoom-thumbs">
-                                        <a href="frontend/images/Mask Group 3.jpg">
-                                            <img src="frontend/images/Mask Group 3.jpg"
-                                            class="xzoom-gallery" width="126" 
-                                            xpreview="frontend/images/Mask Group 3.jpg">
+                                        @foreach ($item->galleries as $gallery)
+                                        <a href="{{ Storage::url($gallery->image )}}">
+                                            <img src="{{ Storage::url($gallery->image )}}"
+                                            class="xzoom-gallery" width="126" height="80" 
+                                            xpreview="{{ Storage::url($gallery->image )}}">
                                         </a>
-
-                                        <a href="frontend/images/Mask Group 3.jpg">
-                                            <img src="frontend/images/Mask Group 3.jpg"
-                                            class="xzoom-gallery" width="126" 
-                                            xpreview="frontend/images/Mask Group 3.jpg">
-                                        </a>
-
-                                        <a href="frontend/images/Mask Group 3.jpg">
-                                            <img src="frontend/images/Mask Group 3.jpg"
-                                            class="xzoom-gallery" width="126" 
-                                            xpreview="frontend/images/Mask Group 3.jpg">
-                                        </a>
-
-                                        <a href="frontend/images/Mask Group 3.jpg">
-                                            <img src="frontend/images/Mask Group 3.jpg"
-                                            class="xzoom-gallery" width="126" 
-                                            xpreview="frontend/images/Mask Group 3.jpg">
-                                        </a>
-
-                                        <a href="frontend/images/Mask Group 3.jpg">
-                                            <img src="frontend/images/Mask Group 3.jpg"
-                                            class="xzoom-gallery" width="126" 
-                                            xpreview="frontend/images/Mask Group 3.jpg">
-                                        </a>
+                                        @endforeach
                                     </div>
 
                                     
                                 </div>
                                 
-                            </div>
+                            </div>    
+                            @endif
 
                         
                         <h2>Tentang Wisata</h2>
-                        <p> Nusa Penida adalah sebuah pulau (=nusa) bagian dari negara Republik Indonesia yang
-                            terletak di sebelah tenggara Bali yang dipisahkan oleh Selat Badung. Di dekat pulau ini
-                            terdapat juga pulau-pulau kecil lainnya yaitu Nusa Ceningan dan Nusa Lembongan.
-                            Perairan pulau Nusa Penida
-                        </p>
-                        <p>Nusa Penida adalah sebuah pulau (=nusa) bagian dari negara Republik Indonesia yang
-                           terletak di sebelah tenggara Bali yang dipisahkan oleh Selat Badung. 
+                        <p> {!! $item->about !!}
                         </p>
 
                         <div class="features row">
                             <div class="col-md-4">
-                                <img src="frontend/images/ic_event.png"
+                                <img src="{{url('frontend/images/ic_event.png')}}"
                                      class="features-image"/>
                                 <div class="description">
                                     <h3>Featured Event</h3>
-                                    <p>Tari Kecak</p>
+                                    <p>{{ $item->featured_event}}</p>
                                 </div>
 
                             </div>
                             <div class="col-md-4 border-left">
-                                <img src="frontend/images/ic_bahasa.png"
+                                <img src="{{url('frontend/images/ic_bahasa.png')}}"
                                      class="features-image"/>
                                 <div class="description">
                                     <h3>Language</h3>
-                                    <p>Bahasa Indonesia</p>
+                                    <p>{{ $item->language}}</p>
                                 </div>
                             </div>
                             <div class="col-md-4 border-left">
-                                <img src="frontend/images/ic_foods.png"
+                                <img src="{{ url('frontend/images/ic_foods.png')}}"
                                      class="features-image"/>
                                 <div class="description">
                                     <h3>Foods</h3>
-                                    <p>Local Foods</p>
+                                    <p>{{ $item->food }}</p>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +91,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card card-details card-right">
-                            <h2>Members are Going</h2>
+                            {{-- <h2>Members are Going</h2>
                             <div class="members my-2">
                                 <img src="frontend/images/usergoing.png" class="member-image">
                                 <img src="frontend/images/usergoing.png" class="member-image">
@@ -122,30 +99,44 @@
                                 <img src="frontend/images/usergoing.png" class="member-image">
                                 <img src="frontend/images/usergoing.png" class="member-image">
                             </div>
-                            <hr>
+                            <hr> --}}
                             <h2>Trip Information</h2>
                             <table class="trip-information">
                                 <tr>
                                     <th width="50%">Date of Departure</th>
-                                    <td width="50%" class="text-right">22 Aug, 2019</td>
+                                    <td width="50%" class="text-right">
+                                        {{\Carbon\Carbon::create($item->date_of_departure)->format('F n, Y') }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th width="50%">Duration</th>
-                                    <td width="50%" class="text-right">4D,3N</td>
+                                    <td width="50%" class="text-right">{{ $item->duration}}</td>
                                 </tr>
                                 <tr>
                                     <th width="50%">Type of trip</th>
-                                    <td width="50%" class="text-right">Open Trip</td>
+                                    <td width="50%" class="text-right">{{ $item->type }}</td>
                                 </tr>
                                 <tr>
                                     <th width="50%">Price</th>
-                                    <td width="50%" class="text-right">$80.00/Person</td>
+                                    <td width="50%" class="text-right">${{ $item->price }},00 / Person</td>
                                 </tr>
                             </table>
                             
                         </div>
                                 <div class="join-container">
-                                    <a href="{{ route('checkout') }}" class="btn btn-block btn-join-now mt-3">Join Now</a>
+                                   @auth
+                                           <form action="{{ route('checkout_process',$item->id) }}" method="post">
+                                            @csrf
+                                           <button class="btn-block btn-join-now mt-3 py-2" type="submit">
+                                                Join Now
+                                           </button>
+                                       </form>
+                                   @endauth
+                                   @guest
+                                   <a href="{{ route('login') }}" class="btn btn-block btn-join-now mt-3">
+                                    Login or Register to Join
+                                    </a>
+                                   @endguest
                                 </div>
                     </div>
                 </div>
@@ -157,11 +148,11 @@
 @endsection
 
 @push('prepend-style')
-    <link rel="stylesheet" href="frontend/libraries/xzoom/xzoom.css">
+    <link rel="stylesheet" href="{{ url('frontend/libraries/xzoom/xzoom.css') }}">
 @endpush
 
 @push('addon-script')
-    <script src="frontend/libraries/xzoom/xzoom.min.js"></script>
+    <script src="{{ url('frontend/libraries/xzoom/xzoom.min.js')}}"></script>
     <script>
         $(document).ready(function(){
             $(".xzoom, .xzoom-gallery").xzoom({

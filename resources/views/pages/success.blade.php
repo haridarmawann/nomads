@@ -1,4 +1,4 @@
-@extends('layout.checkout')
+@extends('layout.success')
 @section('title','success')
 
 @section('content')
@@ -10,7 +10,7 @@
                 <p>We,ve sent you email for trip instruction
                     <br>
                 Please read it well</p>
-                <a href="{{ url('/')}}" class="btn btn-homepage px-5 ">Homepage</a>
+                <a href="{{ route('home') }}" class="btn btn-homepage px-5 mt-2 ">Homepage</a>
             </div>
         </div>
     </main>
